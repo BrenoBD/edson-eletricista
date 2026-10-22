@@ -6,3 +6,7 @@
 *~
 *.log
 .claude/
+
+# banco local de teste
+analytics.db*
+/data/

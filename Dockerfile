@@ -1,7 +1,8 @@
-# Edson Eletricista — site estático servido por nginx (leve)
-FROM nginx:1.27-alpine
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY *.html /usr/share/nginx/html/
-COPY robots.txt sitemap.xml /usr/share/nginx/html/
-COPY assets/ /usr/share/nginx/html/assets/
+# Edson Eletricista — app leve (serve o site + coletor de eventos + painel)
+FROM python:3.12-slim
+WORKDIR /srv
+COPY app.py dashboard.html ./
+COPY public/ ./public/
 EXPOSE 80
+ENV DB_PATH=/data/analytics.db PORT=80
+CMD ["python", "-u", "app.py"]
