@@ -1,0 +1,46 @@
+/* =========================================================================
+   EDSON ELETRICISTA — Variante de layout /v2 (teste A/B)
+   Carrega JUNTO com style.css. Só contém as diferenças da variante:
+   hero centrado (urgência) + grid de problemas + CTA final.
+   ========================================================================= */
+
+/* ---- botão telefone (CTA duplo da variante) ---- */
+.btn--phone { background: #fff; color: var(--dark); box-shadow: 0 6px 18px rgba(0, 0, 0, .18); }
+.btn--phone:hover { background: #f1f1f1; transform: translateY(-2px); }
+.btn--phone svg { fill: var(--dark); }
+
+/* ---- HERO 2 — centrado, foco em urgência ---- */
+.hero2 { position: relative; background: radial-gradient(circle at 50% -10%, rgba(255, 204, 0, .16), transparent 55%), var(--dark); color: #fff; text-align: center; padding: 50px 0 58px; overflow: hidden; }
+.hero2 .container { max-width: 880px; }
+.hero2__logo { width: 76px; height: auto; margin: 0 auto 16px; display: block; filter: drop-shadow(0 10px 22px rgba(0, 0, 0, .55)); }
+.hero2__eyebrow { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: .78rem; letter-spacing: .07em; text-transform: uppercase; color: var(--brand); background: rgba(255, 204, 0, .12); border: 1px solid rgba(255, 204, 0, .35); border-radius: 100px; padding: 7px 16px; margin-bottom: 18px; }
+.hero2__eyebrow svg { width: 16px; height: 16px; fill: var(--brand); }
+.hero2 h1 { font-size: clamp(2rem, 5.4vw, 3.15rem); font-weight: 900; line-height: 1.1; margin: 0 0 16px; text-transform: none; }
+.hero2 h1 .hl { color: var(--brand); }
+.hero2__sub { color: #e8e8e8; font-size: 1.12rem; max-width: 54ch; margin: 0 auto 26px; }
+.hero2__cta { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-bottom: 26px; }
+.hero2__pills { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.hero2__pill { display: inline-flex; align-items: center; gap: 7px; background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .15); color: #fff; font-weight: 600; font-size: .88rem; padding: 8px 15px; border-radius: 100px; }
+.hero2__pill svg { width: 16px; height: 16px; fill: var(--brand); }
+
+/* ---- Problemas que resolvemos (grid) ---- */
+.prob-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.prob2 { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 22px 14px; text-align: center; transition: transform .25s ease, border-color .25s, box-shadow .25s; }
+.prob2:hover { transform: translateY(-4px); border-color: var(--brand); box-shadow: var(--shadow); }
+.prob2__ico { width: 50px; height: 50px; margin: 0 auto 10px; display: grid; place-items: center; border-radius: 50%; background: rgba(255, 204, 0, .18); }
+.prob2__ico svg { width: 26px; height: 26px; fill: none; stroke: #141414; stroke-width: 1.9; }
+.prob2 b { display: block; font-size: .95rem; font-weight: 600; color: var(--ink); }
+@media (max-width: 820px) { .prob-grid { grid-template-columns: repeat(2, 1fr); } }
+
+/* ---- CTA final (faixa amarela) ---- */
+.final2 { background: var(--brand); text-align: center; }
+.final2 h2 { font-size: clamp(1.6rem, 4.2vw, 2.4rem); font-weight: 900; color: var(--dark); margin: 0 0 12px; line-height: 1.15; text-transform: uppercase; }
+.final2 p { color: #4a3d00; max-width: 52ch; margin: 0 auto 26px; font-weight: 500; }
+.final2 .hero2__cta { margin-bottom: 0; }
+.final2 .btn--phone { background: var(--dark); color: #fff; }
+.final2 .btn--phone svg { fill: #fff; }
+.final2 .btn--phone:hover { background: #000; }
+
+@media (max-width: 500px) {
+  .hero2__cta .btn { width: 100%; }
+}
